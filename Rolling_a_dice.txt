@@ -1,0 +1,15 @@
+import pandas as pd 
+import random 
+import matplotlib.pyplot as plt
+L = []
+for i in range(1000):
+    L.append(random.randint(1,6))
+x = (pd.Series(L).value_counts()/pd.Series(L).value_counts().sum()).sort_index()
+print(x)
+x.plot(kind='bar')
+plt.xlabel('Possible Outcomes')
+plt.ylabel('Probability')
+plt.title('Rolling a dice')
+plt.show()
+
+#if you add max data points, it will improve the output of accuracy. 
