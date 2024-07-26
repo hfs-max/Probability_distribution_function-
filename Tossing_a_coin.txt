@@ -1,0 +1,13 @@
+import pandas as pd 
+import random 
+import matplotlib.pyplot as plt
+L = []
+for i in range(10):
+    L.append(random.randint(1,2))
+x = (pd.Series(L).value_counts()/pd.Series(L).value_counts().sum()).sort_index()
+print(x)
+x.plot(kind='bar')
+plt.xlabel('Number')
+plt.ylabel('Relative Frequency')
+plt.title('Relative Frequency of Random Numbers')
+plt.show()
