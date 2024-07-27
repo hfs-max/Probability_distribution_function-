@@ -1,0 +1,22 @@
+import pandas as pd 
+import random 
+import numpy as np
+import matplotlib.pyplot as plt
+
+L = []
+for i in range(1000):
+    a = random.randint(1, 6)
+    b = random.randint(1, 6)
+    L.append(a + b)
+
+x = (pd.Series(L).value_counts() / pd.Series(L).value_counts().sum()).sort_index()
+q = np.cumsum(x)
+plt.figure(figsize=(5,3))
+q.plot(kind='bar', color='skyblue', edgecolor='black')
+plt.xlabel('Possible Outcomes', fontsize=10)
+plt.ylabel('Probability', fontsize=10)
+plt.title('Probability Distribution of Rolling Two Dice', fontsize=10)
+plt.xticks(rotation=0, fontsize=10)
+plt.yticks(fontsize=10)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
