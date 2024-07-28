@@ -15,3 +15,15 @@ It deals only with the discrete random variables. (P(X=x)
 ## Commulative distribuation function with PDF 
 This function deals with the probability of each possible outcome of rolling two dice, as well as the cumulative probability of outcomes less than or equal to each sum.
 P(X<=x). 
+
+## 2. Probability density function (PDF)
+It deals only with the continuous random variables. The probability density takes along y-axis and possible outcomes takes along x-axis. The probability density finds from the data esimation techniques. 
+
+## Data Estimation
+We can do the data estimation by different techniques such as: 
+1. Parametric distribution estimation
+2. Non-Parametric distribution estimation
+
+## 1. Parametric distribution estimation (PDE) 
+First, we need to visualize the data by plotting it. This will allow us to see the visual form and determine which distribution it is following such as normal and poisson.
+
